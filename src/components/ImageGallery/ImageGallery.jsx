@@ -12,6 +12,12 @@ class ImageGallery extends Component {
       </ul>
     );
   }
+
 }
 
 export default ImageGallery;
+
+
+
+
+
