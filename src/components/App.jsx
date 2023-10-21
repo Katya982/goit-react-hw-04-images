@@ -26,6 +26,20 @@ class App extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    const { query } = this.state;
+
+    if (query !== prevState.query) {
+      this.setState({
+        images: [], 
+        page: 1, 
+        status: 'pending', 
+      });
+
+      this.fetchImages(query, 1);
+    }
+  }
+
   handleScroll = () => {
     const { status } = this.state;
     if (status === 'resolved' && window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
@@ -112,6 +126,3 @@ class App extends Component {
 };
 
 export default App;
-
-
-
