@@ -69,7 +69,7 @@ class App extends Component {
       .get(`https://pixabay.com/api/?q=${searchQuery}&page=${pageNum}&key=${API_KEY}&image_type=photo&orientation=horizontal&per_page=12`)
       .then((response) => {
         this.setState((prevState) => ({
-          images: [...prevState.images, ...response.data.hits],
+           images: response.data.hits,
           page: prevState.page + 1,
           status: 'resolved',
         }));
