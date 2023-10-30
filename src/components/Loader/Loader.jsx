@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Circles} from 'react-loader-spinner';
 
-class Loader extends Component {
-  render() {
-    return (
+const Loader = () => {
+  return (
     <div className="loader">
       <Circles
         height="80"
@@ -15,10 +14,34 @@ class Loader extends Component {
         visible={true}
       />
     </div>
-    );
-  }
-}
+  );
+
+};
 
 export default Loader;
+
+
+// import React, { Component } from 'react';
+// import {Circles} from 'react-loader-spinner';
+
+// class Loader extends Component {
+//   render() {
+//     return (
+//     <div className="loader">
+//       <Circles
+//         height="80"
+//         width="80"
+//         color="#303f9f"
+//         ariaLabel="circles-loading"
+//         wrapperStyle={{}}
+//         wrapperClass=""
+//         visible={true}
+//       />
+//     </div>
+//     );
+//   }
+// }
+
+// export default Loader;
 
 
